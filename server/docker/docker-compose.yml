@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  server:
+    build:
+      context: .
+      dockerfile: ./nginx.Dockerfile
+    ports:
+      - '8080:80'
+
+  db:
+    image: mongo:3.4.23-xenial
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: melcaro
+      MONGO_INITDB_ROOT_PASSWORD: melcaro
+    volumes:
+      - ./db/:/data/db
