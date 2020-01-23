@@ -3,5 +3,10 @@
     "express": "^4.17.1",
     "mongodb": "^3.5.2",
     "nodemon": "^2.0.2"
+  },
+  "scripts": {
+    "docker compose": "docker compose up --build",
+    "initDB": " node ./scripts/init.js",
+    "start:dev": "nodemon index.js"
   }
 }
