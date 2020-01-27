@@ -6,10 +6,10 @@ import {
 
 import { fetchGallery as getGallery } from '../services/GallerySrv';
 
-export const fetchGallery = () => dispatch => {
+export const fetchGallery = () => async dispatch => {
   try {
     dispatch({ type: FETCH_GALLERY });
-    const gallery = getGallery();
+    const gallery = await getGallery();
 
     console.log(gallery);
 

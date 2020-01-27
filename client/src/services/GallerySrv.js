@@ -1,5 +1,12 @@
 import axios from 'axios';
 
+URL = '/api/v1';
+
+export async function fetchGallery() {
+  const { data } = await axios.get(`${URL}/gallery`);
+  return data;
+}
+
 const gallery = [
   {
     photoID: Math.random()
@@ -30,7 +37,3 @@ const gallery = [
       'https://images.unsplash.com/photo-1464897202529-674b62373651?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80',
   },
 ];
-
-export function fetchGallery() {
-  return gallery;
-}
