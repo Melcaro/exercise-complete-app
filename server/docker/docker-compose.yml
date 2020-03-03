@@ -13,7 +13,7 @@ services:
       dockerfile: ./nginx.Dockerfile
     ports:
       - '8080:80'
-  db:
+  db: 
     image: mongo:3.4.23-xenial
     environment:
       MONGO_INITDB_ROOT_USERNAME: melcaro
